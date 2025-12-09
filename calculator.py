@@ -14,9 +14,13 @@ print("=== Simple Calculator ===")
 print("1. Addiction")
 print("2. Subtraction")
 print("3. Multiplication")
+try:
 choice = input("\nSelect operation (1, 2 or 3): ")
 num1 = float(input("Enter first number: ")
 num2 = float(input("Enter second number: ")
+except ValueError:
+print("Error: Please enter valid numbers!"
+return
 if choice == "1":
 result = add(num1, num2)
 print(f"\n{num1} + {num2} = {result}")
